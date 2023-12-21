@@ -1,0 +1,986 @@
+* {
+  /*---- adds margin, padding and fonts universally ---*/
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(images/second\ landing.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+nav.same-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.same-line {
+  flex: 1;
+  text-align: left;
+}
+
+.same-line ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.same-line ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.same-line ul li::after {
+  /*--- adds a hover effect on the navigation bar ---*/
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0568a6;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.same-line ul li:hover::after {
+  width: 100%;
+}
+
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-box h1 {
+  font-size: 90px;
+}
+
+.sign-up-link {
+  /*--- adds features for the sign up link ---*/
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.sign-up-link:hover {
+  border: 1px solid #0568a6;
+  background: #0568a6;
+  transition: 1s;
+}
+
+/*----- about us ------*/
+
+.about-us {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+  text-align: left;
+}
+
+/*---- plans ----*/
+
+.plans {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.plans p {
+  text-align: center;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.second-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.plans-col {
+  flex-basis: 42%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.plans-col img {
+  width: 100%;
+  display: block;
+}
+
+.plan-txt {
+  display: none;
+}
+
+.layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover {
+  background: rgb(192, 192, 192, 0.4);
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+/*----- footer -----*/
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.footer p {
+  text-align: center;
+}
+
+.icons .fa {
+  /*--- adds the features for the footer icons ---*/
+  color: #0568a6;
+  margin: 0px 13px;
+  cursor: pointer;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+/*---- text box for sign in page ----*/
+.sub-header {
+  height: 50vh;
+  width: 100%;
+  background-image: url(images/second\ landing.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.second-text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.second-text-box h1 {
+  font-size: 55px;
+}
+
+.users-page {
+  width: 80%;
+  margin: auto;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.users-page .form {
+  /*---- choose account type login form ----*/
+  position: relative;
+  width: 400px;
+  height: 350px;
+  padding-top: 20px;
+  padding-bottom: auto;
+  margin: 20px auto;
+}
+
+.form .users-header {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.form .users-header > div {
+  width: calc(100% / 2);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form.signin .users-header div.show-client {
+  color: #0568a6;
+  cursor: pointer;
+}
+
+.form.signin .users-header div.show-admin {
+  cursor: pointer;
+}
+
+.form.signin .users-header div.show-rm {
+  cursor: pointer;
+}
+
+.form.admin .users-header div.show-admin {
+  color: #0568a6;
+  cursor: pointer;
+}
+
+.form.rm .users-header div.show-rm {
+  color: #0568a6;
+  cursor: pointer;
+}
+
+.form .form-elements {
+  margin-top: 15px;
+}
+
+.form .form-elements .form-element {
+  height: 60px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.form .form-elements input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin: 5px 0px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid #0568a6;
+  background: #eee;
+}
+
+.form .form-elements button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 5px;
+  border-radius: 10px;
+  background: #0568a6;
+  color: #f5f5f5;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.form .arrow {
+  position: absolute;
+  top: 60px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #0568a6;
+}
+
+.form.signin .arrow {
+  left: calc(calc(100% / 3) / 2.2);
+}
+
+.form.admin .arrow .clicked {
+  left: calc(calc(100% / 3) + calc(calc(100% / 3) / 2.2));
+}
+
+.form.rm .arrow {
+  left: calc(calc(calc(100% / 3) * 2.1) + calc(calc(100% / 3) / 3));
+}
+
+.form p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.form p a {
+  color: #0568a6;
+}
+
+/*--- contact us ---*/
+.contact-us {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-col div .fa {
+  font-size: 28px;
+  color: #0568a6;
+  margin: 10px;
+  margin-right: 30px;
+}
+
+.contact-col div p {
+  padding: 0;
+}
+
+.contact-col div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #555;
+  font-weight: 400;
+}
+
+.contact-col .sign-up-link {
+  color: black;
+  border: 1px solid #0568a6;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+/*---- sign up ----*/
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 60px;
+}
+
+.signup-container form {
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: #222;
+  background: #fff;
+  text-align: center;
+}
+
+.signup-container form h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.signup-container form input {
+  width: 50%;
+  padding: 10px 15px;
+  font-size: 17px;
+  margin: 8px 0;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.signup-container form select {
+  width: 50%;
+  padding: 10px 15px;
+  font-size: 17px;
+  margin: 9px 0;
+  background: #eee;
+  border-radius: 5px;
+}
+
+.signup-container form select option {
+  background: #fff;
+}
+
+.signup-container form .form-btn {
+  background: #aadbfa;
+  color: #0568a6;
+  text-transform: capitalize;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.signup-container form .form-btn:hover {
+  background: #0568a6;
+  color: #fff;
+}
+
+.signup-container form p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.signup-container form p a {
+  color: #0568a6;
+}
+
+/*---- client page ----*/
+.user-header {
+  height: 13vh;
+  width: 100%;
+  background-image: url(images/second\ landing.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#menu .user-col {
+  background: #ccc;
+  width: 300px;
+  height: 87vh;
+}
+
+#menu .logo {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.img-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.clientname {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+}
+
+#menu .items {
+  margin-top: 10px;
+}
+
+#menu .items li {
+  list-style: none;
+  padding: 15px 0;
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 65px;
+  transition: 0.3s ease;
+}
+
+#menu .items li:hover {
+  background: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+#menu .items li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+#menu .items li:hover a {
+  color: #eee;
+}
+
+#menu .items li:nth-child(1) {
+  border-left: 4px solid #eee;
+}
+
+.edit {
+  cursor: pointer;
+  color: #0568a6;
+  text-align: center;
+}
+
+/*--- admin page ---*/
+#menu .admin-items {
+  margin-top: 10px;
+}
+
+#menu .admin-items li {
+  list-style: none;
+  padding: 15px 0;
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s ease;
+  margin: 20px auto;
+}
+
+#menu .admin-items li:hover {
+  background: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+#menu .admin-items li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+#menu .admin-items li:hover a {
+  color: #eee;
+}
+
+#menu .admin-items li:nth-child(1) {
+  border-left: 4px solid #eee;
+}
+
+.board .admin-row p {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.board.product,
+.board.payment,
+.board.newProduct {
+  display: none;
+}
+
+/*---- rm page ----*/
+.user-row {
+  display: flex;
+}
+
+.user-col2 {
+  width: 70%;
+  margin: 5px auto;
+}
+
+.rm-img-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  margin: 20px auto;
+  margin-top: 60px;
+}
+
+.rmname {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#menu .rm-items {
+  margin-top: 50px;
+}
+
+#menu .rm-items li {
+  list-style: none;
+  padding: 15px 0;
+  width: 170px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.3s ease;
+  margin: 20px auto;
+  margin-bottom: 240px;
+}
+
+#menu .rm-items li:nth-child(1) {
+  border-left: 4px solid #eee;
+}
+
+#menu .rm-items li:hover {
+  background: rgb(192, 192, 192);
+  cursor: pointer;
+}
+
+#menu .rm-items li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 300;
+  transition: 0.3s ease;
+}
+
+#menu .rm-items li:hover a {
+  color: #eee;
+}
+
+.board {
+  width: 97%;
+  margin: 30px 0 30px 30px;
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.board img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.board h5 {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.board p {
+  font-weight: 400;
+  font-size: 13px;
+  color: #555;
+  padding: 0;
+}
+
+.board .people {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: start;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+td {
+  border-bottom: 1px solid #ccc;
+}
+
+thead td {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background: #ccc;
+  text-align: start;
+  padding: 15px;
+}
+
+td select,
+.recommend {
+  width: 160px;
+}
+
+/*---- plan layout -----*/
+.plan-headers {
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.plan-headers h1 {
+  font-size: 25px;
+}
+
+/*--- banking page ---*/
+.banking {
+  width: 100%;
+  height: 58vh;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-image: url(images/banking\ mgt\ -\ Copy.jpg);
+}
+
+.pba {
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.pba h3 {
+  text-align: center;
+}
+
+.pba-menu {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0 10px;
+  width: 100%;
+  gap: 20px;
+}
+
+.pba-menu li {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 12px;
+  text-align: left;
+  color: black !important;
+  width: 100%;
+  padding-left: 5px;
+}
+
+.pba-menu li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.pba-menu li:hover {
+  transition: 0.3s;
+  background: black;
+  color: white !important;
+}
+
+.banking .plans-col {
+  cursor: auto;
+}
+
+.banking .plans-col img {
+  cursor: pointer;
+  height: 90%;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.banking .plans-col .pba {
+  margin-top: -25px;
+  width: 80%;
+}
+
+.form-btn {
+  background: #ccc;
+  color: #0568a6;
+  text-transform: capitalize;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 7px;
+  width: 70%;
+  padding: 5px;
+  margin-top: 20px;
+  margin: 20px auto;
+  border: 1px solid #555;
+}
+
+.active-prd {
+  background: #11d00a;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 15px;
+  border-radius: 7px;
+  width: 70%;
+  padding: 5px;
+  margin-top: 20px;
+  margin: 20px auto;
+  border: 1px solid #555;
+}
+
+.form-btn:hover {
+  background: #0568a6;
+  color: #fff;
+}
+
+/*---- wealth mgt ----*/
+.wealth-mgt {
+  width: 100%;
+  height: 53vh;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  background-image: url(images/wealth\ mgt\ -\ Copy.jpg);
+}
+
+.wealth-mgt p {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 150px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.wealth-mgt .form-btn {
+  width: 25%;
+}
+
+/*--- business page ---*/
+.portfolio-header {
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.portfolio-header h1 {
+  font-size: 25px;
+}
+
+.portfolio-header p {
+  text-align: center;
+}
+
+.portfolio-products {
+  width: 100%;
+  height: 58vh;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  background-image: url(images/business\ lending\ -\ Copy.jpg);
+}
+
+.product1,
+.product2 {
+  border: 1px solid #222;
+  border-radius: 10px;
+  width: 80%;
+  margin: 400px auto;
+  margin-top: 100px;
+  padding: 15px 0;
+  font-size: 20px;
+  cursor: auto;
+}
+
+.portfolio-products .plans-col {
+  cursor: auto;
+}
+
+/*---- investment page ----*/
+.invest {
+  width: 100%;
+  height: 65vh;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  text-align: center;
+  background-image: url(images/invest-landing2.jpg);
+}
+
+.invest-form {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.invest .form-btn {
+  width: 25%;
+}
+
+.center {
+  text-align: center;
+}
+
+.action-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0568a6;
+}
+
+/* / / / / /  For creating new products in Admin page / / / /  */

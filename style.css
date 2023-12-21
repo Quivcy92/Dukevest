@@ -1,0 +1,748 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+
+:root {
+  --primaryColor: hsla(217, 55%, 46%, 1);
+  --secondaryColor: hsla(221, 70%, 30%, 1);
+  --colorExtra: hsla(96, 75%, 58%, 0.932);
+}
+
+/* initial styling for the page setup */
+* {
+  font-family: "Courier New" "Source Code Pro", "Open Sans";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* / / / / / Navigation bar start/ / / / / */
+.navbar {
+  background: hsla(216, 100%, 99%, 1);
+  width: 100%;
+  height: auto;
+  margin-top: -100px;
+  padding: 20px;
+  box-shadow: 0px 2px 3px 2px hsla(22, 93%, 17%, 0.13),
+    0px 2px 2px 3px hsla(217, 93%, 17%, 0.1);
+  position: fixed;
+}
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.navbar a {
+  color: #000000;
+  text-decoration: none;
+}
+/* Flex property added to the unordered list element */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.navbar li {
+  font-weight: 900;
+}
+.navLeft {
+  flex: 1;
+  margin-left: 10px;
+}
+.navLeft li {
+  margin-left: 40px;
+}
+.navRight li {
+  margin-right: 40px;
+}
+
+.navRight img {
+  width: 20px;
+  height: 20px;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* "sign in" button styling */
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  background: hsla(217, 55%, 46%, 1);
+  color: white;
+  border: 1px hsla(220, 70%, 50%, 0.75) solid;
+  padding: 7px 15px;
+  border-radius: 40px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+}
+
+.searchBox {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+/* Search box styling */
+.searchText {
+  width: 10rem;
+  height: 1.8rem;
+  text-align: center;
+  padding: 0.5rem;
+  border: 2px solid hsla(0, 0%, 0%, 1);
+  border-radius: 2rem;
+  outline-color: hsla(217, 70%, 46%, 1);
+}
+.searchBtn {
+  padding-left: 10px;
+}
+/* / / / / / End of Navigaton bar / / / / / */
+.sector {
+  background-color: hsla(221, 70%, 30%, 1);
+  margin-top: 98px;
+}
+.sector-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sector-left {
+  color: white;
+  display: inline-block;
+  margin: 10px 20px;
+}
+.sector-left h1 {
+  font-size: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.sector-left h3 {
+  line-height: 25px;
+  text-align: justify;
+  margin: 10px 30px;
+}
+
+.sector-right {
+  display: inline-block;
+  margin: 10px 0px 10px 20px;
+}
+.sector-right img {
+  width: 450px;
+  height: 100%;
+  margin-top: -8px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  border-radius: 5px;
+}
+.sector-left button {
+  display: block;
+  text-align: left;
+  /* font-size: medium; */
+  color: white;
+  cursor: pointer;
+  background: none;
+  border: 1px white solid;
+  padding: 7px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin: 20px 30px;
+}
+.sector-left button:hover {
+  background-color: hsla(0, 0%, 100%, 0.9);
+  color: var(--secondaryColor);
+  font-weight: 900;
+}
+
+.sector-two {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 20px auto -2px;
+}
+.sector-two-box {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.sector-two-box img {
+  width: 90%;
+  height: 350px;
+}
+.sector-bottom {
+  background-color: hsla(0, 0%, 0%, 1);
+}
+.sector-bottom img {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+}
+.sector-bottom-contact {
+  margin-top: 40px;
+  height: 400px;
+}
+.sector-bottom-contact h1 {
+  color: hsla(0, 0%, 100%, 1);
+  text-align: center;
+}
+/* / / / / / Stylling for response to screen size / / / /  /*/
+@media (max-width: 850px) {
+  .sector-left h1 {
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  .sector-left h3 {
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  .sector-right img {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sector {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sector-left h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
+  .sector-left h3 {
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+}
+.sector-left a {
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  .sector-container {
+    display: block;
+  }
+  .sector-right {
+    display: block;
+    text-align: center;
+  }
+  .sector-left {
+    display: block;
+    text-align: center;
+    margin: 0 50px;
+  }
+  .sector-left button {
+    display: block;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px white solid;
+    padding: 7px 16px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  .sector-right img {
+    width: 400px;
+    height: 300px;
+    margin-bottom: 15px;
+  }
+}
+/* / / /  styling the about page / / / / */
+.abt {
+  color: hsla(0, 0%, 100%, 1);
+  margin: 50px 80px;
+  width: 90%;
+}
+.abt h1,
+h4 {
+  text-align: center;
+  margin: 50px 50px;
+}
+/* / / / / / Styling for the Dukevest Package section  / / / / */
+.dukevest-packages h2 {
+  text-align: center;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.packages {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.packages div {
+  background-color: hsla(0, 0%, 100%, 1);
+  width: 305px;
+  height: 400px;
+  border-top: 7px solid hsla(221, 70%, 30%, 1);
+  border-radius: 10px;
+  box-shadow: 0px 2px 3px 2px hsla(22, 93%, 17%, 0.13),
+    0px 2px 2px 3px hsla(217, 93%, 17%, 0.1);
+}
+.packages div h3 {
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 10px;
+}
+.packages div p {
+  text-align: justify;
+  margin-top: 10px;
+  padding: 20px;
+  color: hsla(0, 0%, 0%, 1);
+}
+
+.packages div span img {
+  width: 150px;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.packages a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.packages div:hover {
+  background: linear-gradient(
+    180deg,
+    hsla(209, 63%, 73%, 1),
+    hsla(0, 0%, 100%, 0.5)
+  );
+  width: 350px;
+  height: 430px;
+}
+.hr1 {
+  border: 2px solid hsla(221, 70%, 30%, 1);
+  width: 90%;
+  margin: 0 auto;
+}
+/* / / / / / / / /Stylling of Dukevest Package Sectiond Ends / / / // / / / / */
+
+/* / / / / / / / /sign-up page styling/// */
+.sign-up-page {
+  margin-top: 98px;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.su-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.su-thumbnail img {
+  width: 200px;
+  height: auto;
+}
+.su-thumbnail {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.su-form {
+  background: hsla(0, 0%, 100%, 1);
+  text-align: center;
+  border: 3px hsla(216, 55%, 46%, 1) solid;
+  border-radius: 10px;
+  padding: 5px 30px;
+  margin-bottom: 2%;
+  box-shadow: 0px 2px 3px 2px hsla(22, 93%, 17%, 0.13),
+    0px 2px 2px 3px hsla(217, 93%, 17%, 0.1);
+}
+
+.su-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 10px;
+}
+
+.su-details label {
+  padding: 8px 20px;
+  font-size: large;
+}
+
+.su-input {
+  margin: auto 10px;
+}
+.su-input input {
+  border: 3px hsla(208, 86%, 38%, 1) solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+  padding: 8px 80px;
+}
+.su-btn {
+  display: flex;
+  background-color: hsla(208, 86%, 38%, 1);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 7px;
+  color: hsla(0, 0%, 100%, 1);
+  padding: 8px 100px;
+  margin: 15px auto;
+  font-size: large;
+}
+.su-btn:hover {
+  cursor: pointer;
+}
+/* .su-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px auto;
+}
+.su-footer a {
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 1);
+} */
+/* / / / / / / / /sign-up page styling Ends / / / / / / / / / */
+
+/* / / / / / / / /sign-In page styling/// */
+.sign-in-page {
+  width: 100%;
+  height: auto;
+  margin-top: 15%;
+}
+.si-container {
+  display: block;
+  border: 2px hsla(216, 55%, 46%, 1) solid;
+  border-radius: 10px;
+  margin: auto;
+  padding: 5px 30px;
+  width: 500px;
+  background: white;
+  box-shadow: 0px 2px 3px 2px hsla(22, 93%, 17%, 0.13),
+    0px 2px 2px 3px hsla(217, 93%, 17%, 0.1);
+}
+.si-container h2 {
+  text-align: center;
+}
+.si-thumbnail {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.si-thumbnail img {
+  width: 200px;
+  height: auto;
+}
+.si-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 15px;
+}
+
+.si-details label {
+  padding: 8px 20px;
+  font-size: large;
+}
+.si-details input {
+  border: 2px hsla(208, 86%, 38%, 1) solid;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+  width: 70%;
+  padding: 8px 0px;
+}
+.si-btn {
+  display: flex;
+  background-color: hsla(208, 86%, 38%, 1);
+  border: 2px solid hsl(0, 0%, 0%);
+  border-radius: 7px;
+  color: hsla(0, 0%, 100%, 1);
+  padding: 8px 100px;
+  margin: 20px auto;
+}
+.si-footer {
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-around;
+  width: 500px;
+}
+.si-footer a {
+  text-decoration: none;
+  color: hsla(0, 0%, 0%, 1);
+}
+
+/* stylling of the Dukevest Packages Pages */
+.pack-sector-one {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 98px;
+}
+.pack-sector-one img {
+  width: 100%;
+  height: 500px;
+}
+.pack-sector-two {
+  background-color: hsla(212, 44%, 52%, 1);
+  margin: 20px auto;
+  width: 90%;
+}
+#lending {
+  background-color: hsl(202, 48%, 55%, 1);
+}
+#investment {
+  background-color: hsl(201, 80%, 68%, 1);
+}
+#wealth-management {
+  background-color: hsl(213, 38%, 30%, 1);
+}
+.pack-sector-two h3 {
+  margin: 20px 40px;
+  text-align: justify;
+  line-height: 33px;
+  color: hsla(0, 0%, 100%, 1);
+}
+.pack-sector-three {
+  width: 90%;
+  margin-top: -20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pack-sector-three img {
+  width: 100%;
+  height: 500px;
+}
+.pack-bottom {
+  margin: 0px auto;
+  width: 100%;
+}
+.pack-bottom img {
+  width: 100%;
+  height: 300px;
+}
+.pack-contact {
+  margin-top: -5px;
+  height: 400px;
+  background-color: hsla(0, 0%, 5%, 1);
+}
+.pack-contact h2 {
+  padding-top: 100px;
+  color: hsla(0, 0%, 100%, 1);
+  text-align: center;
+}
+.pack-icons {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+.fa-icon {
+  color: white;
+}
+
+/*--- contact us ---*/
+.contact-us {
+  background-color: hsla(0, 0%, 0%, 1);
+  width: 100%;
+  margin: auto;
+}
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.contact-col div .fa {
+  font-size: 28px;
+  color: hsla(44, 48%, 94%, 1);
+  margin: 10px 30px;
+}
+.contact-col div h5,
+p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: hsla(44, 48%, 94%, 1);
+  font-weight: 400;
+}
+
+.contact-col input,
+textarea {
+  background-color: hsla(44, 48%, 94%, 1);
+  color: hsla(0, 0%, 0%, 1);
+  text-align: center;
+  font-family: Courier, monospace;
+  font-size: medium;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 17px;
+  outline: none;
+  border-radius: 8px;
+}
+.contact-col button {
+  background-color: hsla(44, 48%, 94%, 1);
+  color: hsla(0, 0%, 0%, 1);
+  padding: 7px;
+  border-radius: 8px;
+}
+.row {
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+}
+
+/*---- client page ----*/
+.user-header {
+  height: 25vh;
+  width: 100%;
+  background-image: url(./images/footer.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.profile-row {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.profile-col {
+  color: black;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 20px;
+  max-width: 700px;
+  min-width: 350px;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0 10px;
+  width: 100%;
+  gap: 10px;
+}
+.nav-bar li {
+  padding: 10px;
+  border: 2px solid hsla(203, 94%, 34%, 1);
+  border-radius: 12px;
+  text-align: center;
+  color: black !important;
+  width: 100%;
+  padding-left: 5px;
+}
+.nav-bar li a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-bar li:hover {
+  transition: 0.3s;
+  background: hsla(203, 94%, 34%, 1);
+  color: white !important;
+}
+.img-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 20px;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+}
+.clientname {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+}
+.second-text-box {
+  font-size: 25px;
+  color: white;
+  margin-top: 4%;
+  text-align: center;
+}
+
+.nav-left {
+  display: flex;
+  gap: 20px;
+}
+.nav-right {
+  display: flex;
+  gap: 20px;
+}
+.same-line {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+.same-line ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+.same-line ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+.same-line ul li::after {
+  /*--- adds a hover effect on the navigation bar ---*/
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: hsla(203, 94%, 34%, 1);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.same-line ul li:hover::after {
+  width: 100%;
+}
+.text-box {
+  width: 90%;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.text-box h1 {
+  font-size: 90px;
+}
